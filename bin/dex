@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Check if at least one argument is provided
+if [ $# -lt 1 ]; then
+    echo "Usage: dex file.dex [params...]"
+    exit 1
+fi
+
+# The first argument is the .dex file
+dex_file="$1"
+
+# Shift the arguments so that $@ now contains the parameters
+shift
+
+# Execute the .dex file with the provided parameters
+/system/bin/dalvikvm -cp "$dex_file" Main "$@"

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Default output file name
+output="app"
+
+# Check if the first argument is "-o" for output file name
+if [ "$2" == "-o" ]; then
+    output="$1"
+    input="$3"
+else
+    input="$1"
+fi
+
+# Check if input file is provided
+if [ -z "$input" ]; then
+    echo "Error: No input file provided."
+    echo "Usage: smali2dex output.dex -o input OR script input"
+    exit 1
+fi
+
+# Perform the command
+/system/bin/dalvikvm -cp "$HOME/bin/smali2dex.dex" Main "$input" "$output.dex"
