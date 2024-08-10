@@ -3,8 +3,9 @@ This is a tool that converts a Smali file or folder into a DEX format. It also i
 
 ### Installation Instructions
 - First, place the **bin/** directory in the Termux home directory.
-- Make both files (**smali2dex** and **dex**) executable. For example, use "chmod +x bin/smali2dex".
-- (Optional) You can copy these two files to the binary directory using "cp bin/smali2dex bin/dex $PREFIX/bin/".
+- Make both files (**smali2dex** and **dex**) executable. For example, use `chmod +x bin/smali2dex bin/dex`.
+- (Optional) You can copy these two files to the binary directory using `cp bin/smali2dex bin/dex $PREFIX/bin/`.
+
 
 ### Testing Code
 ```smali
